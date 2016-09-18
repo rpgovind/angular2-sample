@@ -5,8 +5,4 @@
 <!--<input type="text" [value]="name" (keyup) ="name = $event.target.value" />-->
 <input type="text" [(ngModel)]="name" />
 <button (click)="changeColor()">Change color</button>
-<ul>
-    <li [style.color] ='rameshColor' *ngFor="let item of customers">
-       <app-customer [customer] ="item" > </app-customer>
-    </li>
-</ul>
+<app-customers > </app-customers>
