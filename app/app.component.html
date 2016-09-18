@@ -1,0 +1,7 @@
+<h1>{{title}}</h1>
+<div [style.color]='rameshColor'>
+    Hello, {{name}}
+</div>
+<!--<input type="text" [value]="name" (keyup) ="name = $event.target.value" />-->
+<input type="text"  [(ngModel)]="name" />
+<button (click)="changeColor()">Change color</button>
