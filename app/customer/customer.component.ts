@@ -5,9 +5,15 @@ import { Component , Input , OnInit} from '@angular/core';
     templateUrl: 'app/customer/customer.component.html'
 })
 export class CustomerComponent implements OnInit {
- @Input()   customer: {id: number, name: string };
+ @Input()   customer: Customer; //{id: number, name: string };
     constructor () {
 
     }
     ngOnInit() { }
+}
+
+export class  Customer  {
+    id: number;
+    name1: number;
+    address : string;
 }

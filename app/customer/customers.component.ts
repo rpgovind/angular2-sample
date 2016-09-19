@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CustomerService } from './customer.service';
+import {Customer}  from './customer.component';
 
 @Component({
     moduleId : module.id,
@@ -7,9 +8,9 @@ import { CustomerService } from './customer.service';
     templateUrl: 'customers.component.html'
 })
 export class CustomersComponent implements OnInit {
-   customers : any [];
+   customers : Customer [];
     constructor(private _customerService : CustomerService) { }
     ngOnInit() {
-        this.customers = this._customerService.getCustomers();
+          this._customerService.getCustomers().then(customers =>  this.customers = customers);
     }
 }
